@@ -1,0 +1,254 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.2 (16/9/2014)
+%
+% Original author:
+% Debarghya Das (http://debarghyadas.com)
+%
+% Original repository:
+% https://github.com/deedydas/Deedy-Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% TODO:
+% 1. Integrate biber/bibtex for article citation under publications.
+% 2. Figure out a smoother way for the document to flow onto the next page.
+% 3. Add styling information for a "Projects/Hacks" section.
+% 4. Add location/address information
+% 5. Merge OpenFont and MacFonts as a single sty with options.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CHANGELOG:
+% v1.1:
+% 1. Fixed several compilation bugs with \renewcommand
+% 2. Got Open-source fonts (Windows/Linux support)
+% 3. Added Last Updated
+% 4. Move Title styling into .sty
+% 5. Commented .sty file.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the
+% vertical limit
+% 2. Hacky space on the first bullet point on the second column.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\documentclass[]{deedy_resume}
+\usepackage{fancyhdr}
+\usepackage{comment}
+\usepackage{enumitem}
+ 
+\pagestyle{fancy}
+\fancyhf{}
+ 
+\rfoot{Page \thepage \hspace{1pt}}
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     LAST UPDATED DATE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\lastupdated
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\namesection{James}{Parsons}{ 
+\urlstyle{same}
+\href{jamespar.tech}{jamespar.tech}| 
+\href{mailto:jwparsons@pm.me}{jwparsons@pm.me} | 305.282.0009
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{minipage}[t]{0.36\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Education} 
+\subsection{Florida State University}
+\descript{MS in Computer Science}
+\location{Aug 2018 | Tallahassee, FL}
+College of Arts \& Sciences\\
+Summa Cum Laude\\
+\location{GPA: 4.0}
+\sectionsep
+
+\subsection{Boston University}
+\descript{BS in Biomedical Engineering}
+\location{May 2014 | Boston, MA}
+College of Engineering \\
+\location{GPA: 3.0}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     LINKS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Links} 
+Github:// \href{https://github.com/jwparsons}{\bf jwparsons} \\
+BitBucket://\href{https://bitbucket.org/jwparsons/}{\bf jwparsons} \\
+LinkedIn://  \href{https://www.linkedin.com/in/jamespar/}{\bf jamespar} \\
+StackOverflow://\href{https://stackoverflow.com/users/9915449/jwp}{\bf jwp}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     COURSEWORK
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Coursework}
+\subsection{Graduate}
+Social Network Mining \\
+Artificial Intelligence \\
+Wireless \& Mobile Computing \\
+Data Communications \\
+Parallel Programming \\
+Theory of Automata \\
+Cyber Security Fundamentals \\
+Network Security \\
+\sectionsep
+
+\subsection{Undergraduate}
+Data Structures \\
+Algorithms \\
+Operating Systems \\
+Theory of Computation \\
+Theory \& Structure of Databases \\
+Computer Organization \\
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Skills}
+\subsection{Programming}
+\location{Skilled:}
+C++ \textbullet{} Python \textbullet{} Swift \textbullet{} iOS \textbullet{} Unreal \\
+\textbullet{} Git \\
+\location{Knowledgable:}
+C\# \textbullet{} Java \textbullet{} Unity \textbullet{} Android \textbullet{} \LaTeX\ \\
+Unix \textbullet{} Mercurial \\
+\location{Familiar:}
+C \textbullet{} JavaScript \textbullet{} HTML\textbullet{} CSS \\ Assembly \textbullet{} TensorFlow \textbullet{} Turi Create \\ NodeJS \textbullet{} Matlab \textbullet{} Perforce \\
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN TWO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{minipage} 
+\hfill
+\begin{minipage}[t]{0.63\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Experience}
+\runsubsection{E-Crime Inv. Tech. Lab}
+\descript{| Grad. Research Assistant}
+\location{May 2017 – May 2018 | Tallahassee, FL}
+\begin{itemize}[noitemsep,topsep=0pt]
+\item Performed collaborative development on an iOS machine learning data extraction application for law enforcement.
+\item Designed and implemented multiple iterations of an efficient wordbreaking algorithm using Python.
+\end{itemize}
+\vspace{3mm}
+
+\runsubsection{Covalent Reality}
+\descript{| Virtual Reality Development Intern}
+\location{May 2016 – May 2017 | Tallahassee, FL}
+\begin{itemize}[noitemsep,topsep=0pt]
+\item Crafted custom VR experiences for clients in the industry of architectural visualization and spirituality.
+\item Pioneered an innovative VR architectural visualization template to reduce labor while maintaining quality.
+\item Mentored new recruits in building VR experiences and adapting to company infrastructure.
+\end{itemize}
+\vspace{3mm}
+
+\runsubsection{Florida State University}
+\descript{| Grad. Teaching Assistant}
+\location{Feb 2016 – May 2018 | Tallahassee, FL}
+\begin{itemize}[noitemsep,topsep=0pt]
+\itemsep0em 
+\item Guided students through course material in recitations and office hours.
+\item Assisted in the formulation and grading of homeworks, quizzes, exercises, and exams.
+\item Delivered lectures to classrooms of 50+ students when the professor was unavailable.
+\end{itemize}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     PROJECTS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Projects}
+\runsubsection{Rebound}
+\descript{| Unreal Engine 4 + NodeJS}
+\location{Sep 2017 - Dec 2017 | Tallahassee, FL}
+Online multiplayer arena deathmatch video game (UE4) with a matchmaking server (NodeJS). Responsible for design, artwork, mechanics, multiplayer support, and matchmaking.
+\sectionsep
+
+\runsubsection{DeepReads}
+\descript{| TensorFlow}
+\location{March 2018 – May 2018 | Tallahassee, FL}
+Utilized the Goodeads API and recurrent neural networks (TF) to generate text descriptions of books by genre. Performed quantitative analysis to discern the model's accuracy.
+\sectionsep
+
+\runsubsection{LoopHole}
+\descript{| Unity}
+\location{Feb 2017 | Tallahassee, FL}
+Virtual Reality puzzle game for HackFSU '17. Designated team responsibilities and coordinated efforts between members. Personally developed game mechanics, level design, and  UI.
+\sectionsep
+
+\runsubsection{MeatCoin}
+\descript{| NodeJS}
+\location{Jan 2018 – Feb 2018 | Tallahassee, FL}
+Text-based Discord Cryptocurrency trading simulator. Invented for use among my friend group on our server. At peak popularity, had 30+ people trading.
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     AWARDS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Awards} 
+\begin{tabular}{rll}
+2008	 & Espa\~nol FL III Honores  & ``El M\'as Guapo De La Clase'' \\
+\end{tabular}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     PUBLICATIONS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{comment}
+\section{Publications} 
+\renewcommand\refname{\vskip -1.5cm} % Couldn't get this working from the .cls file
+\bibliographystyle{abbrv}
+\bibliography{publications}
+\nocite{*}
+\end{comment}
+
+\end{minipage} 
+\end{document}  \documentclass[]{article}
