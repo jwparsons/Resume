@@ -119,11 +119,17 @@ Ligatures={TeX, NoCommon, NoDiscretionary}]{\mainfontface}
 % Address
 \makeatletter
 
-\newcommand\address[1]{\def\@address{#1}}
+\usepackage{xcolor}
+
+% Define the color for the address
+\definecolor{addresscolor}{RGB}{1,2,3}
+
+% Define the address command
+\newcommand\address[1]{\def\@address{\textcolor{addresscolor}{#1}}}
 \address{}
 
 \newcommand\printaddress{
-	\small{\@address}
+	\small{{\@address}}
 }
 
 \makeatother
@@ -146,7 +152,8 @@ Ligatures={TeX, NoCommon, NoDiscretionary}]{\mainfontface}
 % Contacts
 \makeatletter
 
-\newcommand\contacts[1]{\def\@contacts{#1}}
+% Define the address command
+\newcommand\contacts[1]{\def\@contacts{\textcolor{addresscolor}{#1}}}
 \contacts{}
 
 \newcommand\printcontacts{
